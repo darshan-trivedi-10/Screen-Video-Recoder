@@ -21,6 +21,8 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
     // Collted Video Data in chunks
     recoder.addEventListener("dataavailable", (e) => {
         chunks.push(e.data);
+
+
     })
 
     recoder.addEventListener("stop", (e) => {
@@ -49,9 +51,11 @@ recordBtnCont.addEventListener("click", (e) => {
     recordFlag = !recordFlag;
     if (recordFlag) {
         recoder.start();
+        startTimer();
         recordBtn.classList.add("scale-record");
     } else {
         recoder.stop();
+        stopTimer();
         recordBtn.classList.remove("scale-record");
     }
 })
@@ -59,3 +63,35 @@ recordBtnCont.addEventListener("click", (e) => {
 captureBtnCont.addEventListener("click", (e) => {
 
 })
+
+
+// Timer Function
+let timerId;
+let counter = 0;
+let timer = document.querySelector(".time-cont");
+
+function startTimer() {
+    function displayTimer() {
+        let currSecond = counter;
+        let hour = Number.parseInt(currSecond / 3600);
+        currSecond = currSecond % 3600;
+        let minutes = Number.parseInt(currSecond / 60);
+        currSecond = currSecond % 60;
+        let second = currSecond;
+        hour = (hour < 10 ? `0${hour}` : hour);
+        second = (second < 10 ? `0${second}` : second);
+        minutes = (minutes < 10 ? `0${minutes}` : minutes);
+        timer.style.display = "block";
+        timer.innerText = `${hour} : ${minutes} : ${second}`;
+        counter++;
+    }
+
+    timerId = setInterval(displayTimer, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timerId);
+    timer.style.display = "none";
+    timer.innerText = "00:00:00";
+    counter = 0;
+}
