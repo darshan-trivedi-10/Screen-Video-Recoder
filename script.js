@@ -2,7 +2,8 @@ let video = document.querySelector("video");
 let recoder;
 let constraints = {
     video: true,
-    audio: true
+    audio: false
+    // audio: true
 }
 
 video.volume = 0;
@@ -61,6 +62,18 @@ recordBtnCont.addEventListener("click", (e) => {
 })
 
 captureBtnCont.addEventListener("click", (e) => {
+    let canvas = document.createElement("canvas");
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    let tool = canvas.getContext("2d");
+    tool.drawImage(video, 0, 0, canvas.width, canvas.height);
+    let imgUrl = canvas.toDataURL();
+
+    let a = document.createElement("a");
+    a.href = imgUrl;
+    a.download = "pic.jpg";
+    a.click();
 
 })
 

@@ -34,6 +34,7 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 2;
 }
 
 .actions-cont>* {
@@ -100,8 +101,61 @@ video {
     left: 5rem;
     color: aqua;
     font-size: 0.8rem;
+    z-index: 2;
 }
 
-.timer{
+.timer {
     display: none;
+}
+
+/* Filter Element Style */
+.filter-cont {
+    position: absolute;
+    top: calc((100vh - 16rem) / 2);
+    left: 5rem;
+    height: 16rem;
+    width: 5rem;
+    background-color: antiquewhite;
+    z-index: 2;
+}
+
+.filter {
+    height: 4rem;
+    background-image: url("https://picsum.photos/seed/picsum/200/300");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+}
+
+.filter:hover {
+    height: 4.1rem;
+    width: 5.1rem;
+    border-radius: 5px;
+}
+
+.orange {
+    background-color: #ffa50052;
+}
+
+.brown {
+    background-color: #a52a2a59;
+}
+
+.pink {
+    background-color: #ffc0cb57;
+}
+
+.transperent {
+    background-color: transparent;
+}
+
+.filter-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffa50052;
+    z-index: 1;
 }
