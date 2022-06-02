@@ -97,10 +97,12 @@ video {
 /* Timer Style :- */
 .time-cont {
     position: absolute;
-    bottom: 10rem;
+    /* bottom: 10rem; */
+    top: 8rem;
     left: 5rem;
     color: aqua;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
     z-index: 2;
 }
 
@@ -156,6 +158,6 @@ video {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: #ffa50052;
+    /* background-color: #ffa50052;  */
     z-index: 1;
 }
