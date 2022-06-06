@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-y: hidden;
 }
 
 /* Video Cont- Style */
@@ -160,4 +161,23 @@ video {
     width: 100vw;
     /* background-color: #ffa50052;  */
     z-index: 1;
+}
+
+
+.material-icons {
+    color: white;
+    font-size: 3rem;
+}
+
+.gallery {
+    position: absolute;
+    right: 6rem;
+    bottom: 7rem;
+    z-index: 5;
+
+}
+
+.gallery:hover {
+    cursor: pointer;
+    font-size: 3.1rem ;
 }

@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Camera - Gallery</title>
 </head>
 
 <body>
-    <!-- <h1>I am at 38:00</h1> -->
+    <!-- <h1>I am at 58:32</h1> -->
     <!-- For Stream -->
     <div class="video-cont">
         <video autoplay src=""></video>
@@ -38,9 +39,19 @@
     </div>
     <div class="filter-layer"></div>
 
+    <span class="material-icons gallery">collections</span>
+
 </body>
 
 
+<script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+<script src="./db.js"></script>
 <script src="./script.js"></script>
+<script>
+    let gallery = document.querySelector(".gallery");
+    gallery.addEventListener("click", (e)=>{
+        location.assign("./gallery.html");
+    })
+</script>
 
 </html>
