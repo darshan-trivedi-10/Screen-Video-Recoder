@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Black Button */
+.back-btn {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 4rem;
+    right: 5rem;
+}
+
+.back-btn:hover {
+    cursor: pointer;
+}
+
+/* Gallery - Container Style */
+.gallery-cont {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgb(208, 173, 230);
+    /* #ced6e0 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.media-cont {
+    width: 15rem;
+    height: 15rem;
+    border: 10px solid wheat;
+    background-color: lightgreen;
+    margin: 2rem;
+    border-radius: 6px;
+}
+
+
+.media {
+    height: calc(100% - 2rem - 2rem);
+    background-color: orange;
+}
+
+.media>* {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.action-btn {
+    height: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download {
+    background-color: black;
+}
+
+.delete {
+    background-color: rgb(255, 43, 43);
+}
