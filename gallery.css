@@ -75,3 +75,8 @@ body {
 .delete {
     background-color: rgb(255, 43, 43);
 }
+
+
+.action-btn:hover{
+    cursor: pointer;
+}
