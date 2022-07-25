@@ -25,7 +25,7 @@ The project is about a web-based camera application.
 ![alt text](https://github.com/darshan-trivedi-10/React-Js/blob/main/Img/Screenshot%20(528).png)
 
 # Camera 
-![alt text]([http://url/to/img.png](https://github.com/darshan-trivedi-10/React-Js/blob/main/Img/Screenshot%20(530).png))
+![alt text](https://github.com/darshan-trivedi-10/React-Js/blob/main/Img/Screenshot%20(530).png)
 
 ## Technologies Used: 
 HTML, CSS, JavaScript, IndexDB, MediaSreams, Canvas APIs.
