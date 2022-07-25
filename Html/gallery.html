@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./gallery.css">
+    <link rel="stylesheet" href="../CSS/gallery.css">
     <title>Gallery</title>
 </head>
 
 <body>
+    <center>
+        <div>
+            <h1 >
+                <span class="title-word title-word-1">Gallery</span>
+            </h1>
+        </div>
+    </center>
     <div class="back-btn">Back</div>
     <div class="gallery-cont">
     </div>
@@ -19,11 +26,10 @@
 <script>
     let backBtnEle = document.querySelector(".back-btn")
     backBtnEle.addEventListener("click", (e) => {
-        location.assign("./index.html");
+        location.assign("./main.html");
     })
 </script>
-<script src="./db.js"></script>
-<script src="./gallery.js"></script>
-
+<script src="../Script/db.js"></script>
+<script src="../Script/gallery.js"></script>
 
 </html>

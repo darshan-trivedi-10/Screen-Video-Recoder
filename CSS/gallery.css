@@ -5,6 +5,9 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #262a2e;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
 }
 
 
@@ -25,14 +28,14 @@ body {
 
 .back-btn:hover {
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 /* Gallery - Container Style */
 .gallery-cont {
     min-height: 100vh;
     width: 100vw;
-    background-color: rgb(208, 173, 230);
-    /* #ced6e0 */
+    background-color: #262a2e;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -45,7 +48,7 @@ body {
     border: 10px solid wheat;
     background-color: lightgreen;
     margin: 2rem;
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
 
@@ -77,6 +80,62 @@ body {
 }
 
 
-.action-btn:hover{
+.action-btn:hover {
     cursor: pointer;
+}
+
+
+/* Heading Animastion */
+
+.title-word {
+    font-family:cursive;
+    animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+}
+
+.title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+}
+
+@keyframes color-animation {
+    0% {
+        color: var(--color-1)
+    }
+
+    32% {
+        color: var(--color-1)
+    }
+
+    33% {
+        color: var(--color-2)
+    }
+
+    65% {
+        color: var(--color-2)
+    }
+
+    66% {
+        color: var(--color-3)
+    }
+
+    99% {
+        color: var(--color-3)
+    }
+
+    100% {
+        color: var(--color-1)
+    }
 }

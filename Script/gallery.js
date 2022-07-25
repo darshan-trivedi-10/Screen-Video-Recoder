@@ -27,9 +27,7 @@ setTimeout(() => {
                 downloadBtn.addEventListener("click", downloadListener);
 
             })
-
         }
-
 
         // Image retrieval
         let imagedbTransaction = db.transaction("image", "readonly");
@@ -59,8 +57,6 @@ setTimeout(() => {
 
             })
         }
-
-
     }
 }, 100);
 
@@ -79,6 +75,10 @@ function deleteListener(e) {
         let imagedbTransaction = db.transaction("image", "readwrite");
         let imageStore = imagedbTransaction.objectStore("image");
         imageStore.delete(id);
+    } else if (id.slice(0, 3) === "scr") {
+        let videodbTransaction = db.transaction("video", "readwrite");
+        let videoStore = videodbTransaction.objectStore("video");
+        videoStore.delete(id);
     }
 
     // UI Removal
@@ -115,6 +115,19 @@ function downloadListener(e) {
             a.click();
         }
 
+    } else if (id.slice(0, 3) === "scr") {
+        let videodbTransaction = db.transaction("video", "readwrite");
+        let videoStore = videodbTransaction.objectStore("video");
+        let videoRequest = videoStore.get(id);
+
+        videoRequest.onsuccess = (e) => {
+            let videoResult = videoRequest.result;
+            let videoURL = URL.createObjectURL(videoResult.blobData);
+            let a = document.createElement("a");
+            a.href = videoURL;
+            a.download = "screenRec.mp4";
+            a.click();
+        }
     }
 
 }

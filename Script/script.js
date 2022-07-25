@@ -2,8 +2,7 @@ let video = document.querySelector("video");
 let recoder;
 let constraints = {
     video: true,
-    audio: false
-    // audio: true
+    audio: true
 }
 
 video.volume = 0;
@@ -22,8 +21,6 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
     // Collted Video Data in chunks
     recoder.addEventListener("dataavailable", (e) => {
         chunks.push(e.data);
-
-
     })
 
     recoder.addEventListener("stop", (e) => {
@@ -40,10 +37,6 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
             }
             videoStore.add(videoEntry);
         }
-        // let a = document.createElement("a");
-        // a.href = videoURL;
-        // a.download = "stream.mp4";
-        // a.click();
     })
 })
 
@@ -93,27 +86,23 @@ captureBtnCont.addEventListener("click", (e) => {
             url: imgUrl
         }
         imageStore.add(imageEntry);
-
     }
     setTimeout(() => {
         captureBtn.classList.remove("scale-capture");
     }, 500);
-
-    // let a = document.createElement("a");
-    // a.href = imgUrl;
-    // a.download = "pic.jpg";
-    // a.click();
-
 })
 
 
 // Timer Function
 let timerId;
 let counter = 0;
-let timer = document.querySelector(".time-cont");
+let timer = document.querySelector(".timer");
+let timerCont = document.querySelector(".time-cont");
+
 
 function startTimer() {
     function displayTimer() {
+        timerCont.style.display = 'flex'
         let currSecond = counter;
         let hour = Number.parseInt(currSecond / 3600);
         currSecond = currSecond % 3600;
@@ -123,7 +112,6 @@ function startTimer() {
         hour = (hour < 10 ? `0${hour}` : hour);
         second = (second < 10 ? `0${second}` : second);
         minutes = (minutes < 10 ? `0${minutes}` : minutes);
-        timer.style.display = "block";
         timer.innerText = `${hour} : ${minutes} : ${second}`;
         counter++;
     }
@@ -131,9 +119,10 @@ function startTimer() {
     timerId = setInterval(displayTimer, 1000);
 }
 
+
 function stopTimer() {
     clearInterval(timerId);
-    timer.style.display = "none";
+    timerCont.style.display = "none";
     timer.innerText = "00:00:00";
     counter = 0;
 }
@@ -146,7 +135,6 @@ allFilter.forEach((filterElem) => {
         // Get Style 
         transparentColor = getComputedStyle(filterElem).getPropertyValue("background-color");
         filterLayer.style.backgroundColor = transparentColor;
+        console.log(transparentColor);
     })
-
 })
-
