@@ -18,6 +18,15 @@ The project is about a web-based camera application.
 
 7. All the data is stored in the IndexDB storage system.
 
+# Home Page
+![alt text](https://github.com/darshan-trivedi-10/React-Js/blob/main/Img/Screenshot%20(527).png)
+
+# Screen Recoding 
+![alt text](https://github.com/darshan-trivedi-10/React-Js/blob/main/Img/Screenshot%20(530).png)
+
+# Gallery
+![alt text](http://url/to/img.png)
+
 ## Technologies Used: 
 HTML, CSS, JavaScript, IndexDB, MediaSreams, Canvas APIs.
 
