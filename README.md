@@ -18,6 +18,9 @@ The project is about a web-based camera application.
 
 7. All the data is stored in the IndexDB storage system.
 
+# Page
+[https://screenvideorecoder.netlify.app/index.html](https://screenvideorecoder.netlify.app/index.html)
+
 # Home Page
 ![alt text](https://github.com/darshan-trivedi-10/React-Js/blob/main/Img/Screenshot%20(527).png)
 
